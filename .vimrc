@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -71,7 +72,7 @@ let g:NERDTreeMinimalUI = 1 "NERDTree bookmarks disable
 let g:user_emmet_leader_key='<C-Q>' " Change emmet hotkeys
 
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -90,3 +91,10 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 let g:rspec_command = "!rspec {spec}"
+
+" Nerdcommenter space after comment sign
+let g:NERDSpaceDelims = 1
+
+" CtrpP mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
