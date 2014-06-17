@@ -19,6 +19,7 @@
   co = checkout
   cp = cherry-pick
   df = diff
+  l  = log
   st = status -s
 
   # Pull
@@ -35,9 +36,14 @@
   psu  = push upstream
   psum = push upstream master
 
-  # Log
-  l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
-  ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  # Github
+  pr = pull-request
+  bis = browse -- issues
+  bp = browse -- pulls
+  cmp = compare
+[format]
+  pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+  graph = true
 [color]
   diff = auto
   status = auto
