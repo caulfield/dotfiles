@@ -36,9 +36,11 @@
   psu  = push upstream
   psum = push upstream master
 
+  # Github
   pr = pull-request
   bis = browse -- issues
   bp = browse -- pulls
+  cmp = compare
 [format]
   pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
   graph = true
