@@ -1,0 +1,54 @@
+[user]
+  name = Sergey Kuchmistov
+  email = sergey.kuchmistov@gmail.com
+  editor = vim
+[github]
+  user = caulfield
+[push]
+  default = current
+[core]
+  excludesfiles = ~/.gitignore
+[merge]
+  ff = only
+  log = true
+[alias]
+  aa = add --all
+  ap = add --patch
+  ca = commit --amend
+  ci = commit -v
+  co = checkout
+  cp = cherry-pick
+  df = diff
+  st = status -s
+
+  # Pull
+  pl   = pull
+  plo  = pull --rebase origin
+  plom = pull --rebase origin master
+  plu  = pull --rebase upstream
+  plum = pull --rebase upstream master
+
+  # Push
+  ps   = push
+  pso  = push origin
+  psom = push origin master
+  psu  = push upstream
+  psum = push upstream master
+
+  # Log
+  l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+  ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[color]
+  diff = auto
+  status = auto
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added     = cyan bold
+  branch    = cyan bold
+  changed   = magenta bold
+  deleted   = red bold
+  untracked = yellow bold
