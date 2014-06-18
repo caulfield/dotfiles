@@ -65,6 +65,7 @@ set backspace=indent,eol,start
 " set guioptions-=m  "remove menu bar
 " set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
+set guifont=Consolas\ 12
 
 autocmd vimenter * if !argc() | NERDTree | endif "NERDTree on startup
 
