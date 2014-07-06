@@ -14,12 +14,13 @@
 [alias]
   aa = add --all
   ap = add --patch
+  amend = commit --amend -a
   ca = commit --amend
   ci = commit -v
   co = checkout
   cp = cherry-pick
   df = diff
-  l  = log
+  l  = log --oneline --abbrev-commit --all --decorate --color
   st = status -s
 
   # Pull
