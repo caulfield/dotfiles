@@ -74,6 +74,7 @@ let g:NERDTreeMinimalUI = 1 "NERDTree bookmarks disable
 
 let g:user_emmet_leader_key='<C-Q>' " Change emmet hotkeys
 
+set t_Co=256
 set background=dark
 colorscheme Tomorrow-Night
 set guioptions-=T " Removes top toolbar
