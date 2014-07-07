@@ -30,6 +30,8 @@ Plugin 'depuracao/vim-rdoc'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 
@@ -95,3 +97,5 @@ let g:NERDSpaceDelims = 1
 " CtrpP mappings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+let g:neocomplcache_enable_at_startup = 1
