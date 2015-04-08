@@ -11,6 +11,7 @@ Plugin 'bling/vim-airline'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'int3/vim-extradite'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-rails'
@@ -32,12 +33,16 @@ Plugin 'mattn/emmet-vim'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'duggiefresh/vim-easydir'
+Plugin 'stefanoverna/vim-i18n'
 
 call vundle#end()
 
 filetype plugin indent on
 syntax enable
 
+set clipboard=unnamedplus
 set number
 set showcmd
 set history=1000
@@ -78,7 +83,7 @@ let g:user_emmet_leader_key='<C-Q>' " Change emmet hotkeys
 
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme codeschool
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -99,3 +104,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:neocomplcache_enable_at_startup = 1
+
+
+" i18n
+vmap <Leader>z :call I18nTranslateString()<CR>
