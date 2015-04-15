@@ -55,8 +55,4 @@ if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export PATH=~/mongodb/mongodb-linux-x86_64-2.6.3/bin:$PATH
-
 export EDITOR='vim'
-source ~/.bin/tmuxinator.zsh
