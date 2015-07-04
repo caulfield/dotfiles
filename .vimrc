@@ -32,7 +32,6 @@ Plug 'jnwhiteh/vim-golang'
 Plug 'mileszs/ack.vim'
 Plug 'duggiefresh/vim-easydir'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'mivok/vimtodo'
 
 call plug#end()
 
