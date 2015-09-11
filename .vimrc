@@ -29,9 +29,10 @@ Plug 'Raimondi/delimitMate'
 Plug 'depuracao/vim-rdoc'
 Plug 'mattn/emmet-vim'
 Plug 'jnwhiteh/vim-golang'
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
 Plug 'duggiefresh/vim-easydir'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'prophittcorey/vim-flay'
 
 call plug#end()
 
@@ -70,7 +71,8 @@ set backspace=indent,eol,start
 set guioptions-=r  "remove right-hand scroll bar
 set guifont=Consolas\ 12
 
-autocmd vimenter * NERDTree " NERDTree on startup
+" NERDTree on startup
+:autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 let g:NERDTreeWinPos = "right" "NERDTree on right side
 let g:NERDTreeMinimalUI = 1 "NERDTree bookmarks disable
 
@@ -98,3 +100,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:neocomplcache_enable_at_startup = 1
+
+" vim-flay mapping
+nnoremap <Leader>f :Flay<CR>
