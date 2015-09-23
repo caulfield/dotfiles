@@ -10,6 +10,7 @@
   default = current
 [core]
   excludesfiles = ~/.gitignore
+  autoclrf = true
 [merge]
   log = true
 [alias]
@@ -27,8 +28,10 @@
   # Pull
   pl   = pull
   plo  = pull --rebase origin
+  plod = pull --rebase origin develop
   plom = pull --rebase origin master
   plu  = pull --rebase upstream
+  plud = pull --rebase upstream develop
   plum = pull --rebase upstream master
 
   # Push
