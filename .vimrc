@@ -1,16 +1,17 @@
 set nocompatible
-filetype off
-
+filetype off 
 call plug#begin("~/.vim/plugged")
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'szw/vim-tags'
 Plug 'kien/ctrlp.vim'
+Plug 'gabesoft/vim-ags'
+Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'bling/vim-airline'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-rails'
@@ -29,16 +30,16 @@ Plug 'Raimondi/delimitMate'
 Plug 'depuracao/vim-rdoc'
 Plug 'mattn/emmet-vim'
 Plug 'jnwhiteh/vim-golang'
-Plug 'rking/ag.vim'
 Plug 'duggiefresh/vim-easydir'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-Plug 'prophittcorey/vim-flay'
+Plug 'antlypls/vim-colors-codeschool'
 
 call plug#end()
 
+syntax on
 filetype plugin indent on
-syntax enable
 
+set t_Co=256
 set clipboard=unnamedplus
 set number
 set showcmd
@@ -75,11 +76,19 @@ set guifont=Consolas\ 12
 :autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 let g:NERDTreeWinPos = "right" "NERDTree on right side
 let g:NERDTreeMinimalUI = 1 "NERDTree bookmarks disable
+" Nerdtree arrows
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 let g:user_emmet_leader_key='<C-Q>' " Change emmet hotkeys
 
+highlight VertSplit ctermbg=NONE
+highlight VertSplit ctermfg=NONE
 set background=dark
-colorscheme solarized
+autocmd ColorScheme janah highlight Normal ctermbg=235
+colorscheme janah
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -101,5 +110,5 @@ let g:ctrlp_cmd = 'CtrlP'
 
 let g:neocomplcache_enable_at_startup = 1
 
-" vim-flay mapping
-nnoremap <Leader>f :Flay<CR>
+let g:ags_no_stats = 0
+
